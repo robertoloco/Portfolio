@@ -1,0 +1,46 @@
+<html>
+<head> 
+	<meta charset="UTF-8">
+	<meta name="author" content="Roberto Almela">
+	<title>Funciones anonimas</title>
+</head>
+<body>
+<script>
+	//VARIABLES LOCALES
+	/*
+	
+		- Variable local desaparece cuando finaliza la funcion.*/
+	
+	function saludar(){
+		var saludo="Hola";
+		alert (saludo);
+	}
+	saludar();
+
+	//VARIABLES GLOBALES
+	/* 
+		-Se definen fuera de las funciones.
+		- Tienen ambito global(en toda la pagina).
+		-Son accesibles desde fuer y dentro de las funciones.
+		- Variables globales desaprecen cuando se sale de la pgina.*/
+	
+	var despedida= "Adios";
+	funciton despedir();
+	alert (despedida);
+	}
+	despedir();
+	
+	//VARIABLES AUTOMATICAMENTE GLOBALES
+	// - Si asiganmos un valor a una variable no declarada se convierte en global.
+	function preguntar() {
+		pregunta="¿De que color es el caballo blanco de santiago?";
+		}
+		
+		preguntar();
+		alert(pregunta);
+		
+	
+		
+</script>
+</body>
+</html>

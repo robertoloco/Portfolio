@@ -1,0 +1,28 @@
+<html>
+<head> 
+	<meta charset="UTF-8">
+	<meta name="author" content="Roberto Almela">
+	<title>Funciones anonimas</title>
+</head>
+<body>
+<script>
+	//SINTAXIS DE UNA FUNCION NO ANONIMA
+	//function nombre (<parametros>){<instrucciones>}
+	
+	//SINTAXIS DE UNA FUNCION ANONIMA
+		var producto = function(a,b){return a*b;};
+		var resultado = producto(3,6);
+		alert(resultado);
+		
+	//EL CONSTRUCTOR FUNCTION()
+	var miFuncion = new Function ("a", "b", "return a*b;");
+	var resultado2 = miFuncion(5,7);
+	alert(resultado2);
+	
+	//FUNCIONES ANONIMAS AUTOINVOCADAS
+	(function (){alert ("¡Hola!");}());
+	
+		
+</script>
+</body>
+</html>
