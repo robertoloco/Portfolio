@@ -1,0 +1,22 @@
+<html>
+<head> 
+	<meta charset="UTF-8">
+	<meta name="author" content="Roberto Almela">
+	<title>Ambito variable</title>
+</head>
+<body>
+<p> La variable local nombreCoche no puede ser accedida desde fuera de la funcion</p>
+<p id="demo"></p>
+
+<script>
+miFuncion();
+document.getElementById("demo").innerHTML = "El tipo de la variable es "+ typeof nombreCoche;
+
+function miFuncion(){
+var nombreCoche= "Volvo";
+}
+
+	
+</script>
+</body>
+</html>

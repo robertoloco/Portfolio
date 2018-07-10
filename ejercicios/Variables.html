@@ -38,7 +38,17 @@
 		
 		preguntar();
 		alert(pregunta);
+	
+	//VARIABLES LOCALES Y GLOBALES CON EL MISMO NOMBRE
+	var miVariable ="FUERA";
+	function ambito(){
+		var miVariable="DENTRO";
+		alert (miVariable);
+		}
 		
+		alert(miVariable);
+		ambito();
+		alert(miVariable);
 	
 		
 </script>

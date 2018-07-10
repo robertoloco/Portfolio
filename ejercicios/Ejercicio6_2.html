@@ -1,0 +1,24 @@
+<html>
+<head> 
+	<meta charset="UTF-8">
+	<meta name="author" content="Roberto Almela">
+	<title>Ejercicio 6_2</title>
+</head>
+<body>
+
+	<p id="demo"></p>
+	<script>
+	
+	//Crear un array con tres días de la semana y añadirle posteriormente los días faltantes y que los muestre todos
+		var dias = ["Lunes", "Martes", "Miercoles"];
+		dias.push("Jueves");
+		dias.push("Viernes","Sabado","Domingo");
+		
+		document.getElementById("demo").innerHTML = dias.toString();
+		
+		for(i=0;i<dias.length;i++)
+			alert(dias[i].toString());
+			
+	</script> 
+</body>
+</html>

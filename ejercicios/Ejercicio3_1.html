@@ -1,0 +1,32 @@
+<html>
+<head> 
+	<meta charset="UTF-8">
+	<meta name="author" content="Roberto Almela">
+	<title>Potencia</title>
+</head>
+<body>
+<script>
+
+//Crear una función que nos muestre la potencia de dos números   
+
+	
+	function potencia(a,b){
+		var res=a;
+		if(b==0)
+			res=1;
+		else{
+			for(i=1;i<b;i++){
+				res*=a;
+			}
+		}
+	return res;
+}
+
+alert(potencia(5,1));
+alert(potencia(1,5));
+alert(potencia(0,5));
+alert(potencia(5,0));
+	
+</script>
+</body>
+</html>

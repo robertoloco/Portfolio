@@ -1,0 +1,41 @@
+<html>
+<head> 
+	<meta charset="UTF-8">
+	<meta name="author" content="Roberto Almela">
+	<title>Condicionales.Sentencias if...else</title>
+</head>
+<body>
+<script>
+
+	//IF: especifica un bloque de codigo que se ejecuta si una condicion es cierta.
+	/*SINTAXIS:
+	if((<condicion>)
+	//Instrucciones si la condicion es verdadera
+	}else{
+	//Instrucciones si la condicion es falsa
+	}*/
+	
+	var nota2 = 4;
+	if(nota2 >=5){
+		alert("Has aprobado");
+	}else{
+		alert("Has suspendido");
+	}
+	
+	
+	var nota3 = 9 ;
+	if(nota3 < 5){
+		alert("Has suspendido");
+	}else if(nota3 == 5){
+		alert("Has sacado un suficiente");
+	}else if(nota3 == 6){
+		alert("Has sacado un bien");
+	}else if(nota3 == 7 || nota3 == 8){
+		alert("Has sacado un notable");
+	}else{
+		alert("Has sacado un sobresaliente");
+	}
+	
+</script>
+</body>
+</html>

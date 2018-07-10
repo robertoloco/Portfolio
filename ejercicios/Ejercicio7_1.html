@@ -1,0 +1,27 @@
+<html>
+<head> 
+	<meta charset="UTF-8">
+	<meta name="author" content="Roberto Almela">
+	<title>Ejercicio 7_1</title>
+</head>
+<body>
+
+	<p id="demo"></p>
+	
+	<script>
+	//Crear un programa donde podamos introducir una hora y 
+	//comprobandola con las 12 del mediodía nos indique si son buenos días o buenas tardes.	
+
+	var hora=new Date().getHours();;
+	var mensaje = "";
+	
+	if(hora <=12){
+	 mensaje="¡Buenos Dias!";
+	}else {
+	 mensaje="¡Buenas Tardes!";
+	}
+	alert(mensaje);
+	
+	</script> 
+</body>
+</html>
