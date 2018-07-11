@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Métodos para cadenas de texto</h2>
+
+
+<p id="demo"></p>
+
+<script>
+
+var hoy, algunDia, texto;
+hoy = new Date();
+algunDia = new Date();
+algunDia.setFullYear(2018, 07, 11);
+var mensaje = "";
+var res=0;
+if(algunDia.getFullYear() == hoy.getFullYear()){
+	if(algunDia.getMonth() == hoy.getMonth()){
+		if(algunDia.getDate() == hoy.getDate()){
+			mensaje = "0 dias";
+			}else{
+				res = algunDia.getDate() - hoy.getDate();
+				mensaje= res + " dias";
+		}
+		}else{
+			 res = algunDia.getMonth() - hoy.getMonth();
+				mensaje= res + " meses";
+				}
+}else{
+	res = algunDia.getFullYear()- hoy.getFullYear();
+	mensaje= res + " años";
+	}
+
+
+if (algunDia > hoy) {
+    texto = "Hoy es antes del apocalipsis zombie total y quedan: " + mensaje;
+} else {
+    texto = "Hoy es después del fallido apocalipsis zombie total, más suerte la próxima vez";
+}
+
+ document.getElementById("demo").innerHTML = texto;
+</script>
+
+</body>
+</html>
