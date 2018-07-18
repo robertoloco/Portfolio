@@ -1,0 +1,20 @@
+<html>
+<head> 
+	<meta charset="UTF-8">
+	<meta name="author" content="Roberto Almela">
+	<title>Ejercicio1_1</title>
+<body>
+	<script>
+	var rand = Math.floor(Math.random() * 10) + 1;  // returns a random integer from 1 to 10
+	var num = parseInt(prompt("¿Que numero piensas que es?",));
+	
+	if(num==rand){
+		alert("Enhorabuena has acertado!");
+	}else if(num<rand){
+		alert("Te has quedado por abajo.");
+	}else if(num>rand){
+		alert("Te has quedado por arriba.");
+	}
+	</script>
+</body>
+</html>

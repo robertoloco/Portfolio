@@ -1,0 +1,31 @@
+<html>
+<head> 
+	<meta charset="UTF-8">
+	<meta name="author" content="Roberto Almela">
+	<title>Ejercicio1_3</title>
+</head>
+<body>
+	Numero 1: 
+	<input type="text" name="text" id="text">
+	</br>
+	Numero 2:
+	<input type="text" name="text2" id="text2">
+	
+	<button onclick="myFunction()">Adelante</button>	
+<script>
+	
+	function myFunction(){
+	var operacion =["Suma", "Resta","Multiplicacion", "Division"] ;
+	var res = [parseInt(text)+parseInt(text2),parseInt(text)-parseInt(text2),parseInt(text)*parseInt(text2),parseInt(text)/parseInt(text2)];
+	/*var res_suma = parseInt(text)+parseInt(text2);
+	var res_resta = parseInt(text)-parseInt(text2);
+	var res_mult = parseInt(text)*parseInt(text2);
+	var res_div = parseInt(text)/parseInt(text2);*/
+
+	for(i=0;i<operacion.length;i++){
+	alert("La " + operacion[i] + " es igual a " + res[i]);
+	}
+	}
+</script>
+</body>
+</html>

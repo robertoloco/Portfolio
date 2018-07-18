@@ -1,0 +1,27 @@
+<html>
+<head> 
+	<meta charset="UTF-8">
+	<meta name="author" content="Roberto Almela">
+	<title>Ejercicio1_5</title>
+<body>
+	<script>
+	var num = parseInt(prompt("Numero: ",));
+	
+
+alert(primo(num));
+
+function primo(numero) {
+
+  for (var i = 2; i < numero; i++) {
+
+    if (numero % i === 0) {
+      return false;
+    }
+
+  }
+
+  return numero !== 1;
+}
+	</script>
+</body>
+</html>
