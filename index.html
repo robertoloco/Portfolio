@@ -2,126 +2,84 @@
 <head> 
 	<meta charset="UTF-8">
 	<meta name="author" content="Roberto Almela">
-	<title>Inicio</title>
-	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<link href="https://fonts.googleapis.com/css?family=Kirang+Haerang" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+	
+	<title>Inicio</title>
 
 	<style>
 		* {
 		  padding: 0;
 		  margin: 0;
 		}
-		h1 {
+		.navbar-brand {
 			font-family: 'Kirang Haerang', cursive;
 			color: white;
-			font-size: 24px;
-			padding: 10;		
-		}
-		
-		h2 {
-			font-family: 'Kirang Haerang', cursive;	
-			text-align: center;
-			font-size: 50px;
-		}
-				
-		.mySlides {
-			display:flex
-		}
-		
-		.w3-left, .w3-right, .w3-badge {
-			cursor:pointer
-		}
-		
-		.w3-badge {
-			height:13px;
-			width:13px;
-			padding:0
-		}
-		
-		ul {
-			font-family: 'Oswald', sans-serif;
-			list-style-type: none;
-			margin: 0;
-			padding: 0;
-			overflow: hidden;
-			background-color: #333333;
-		}
-
-		li.logo {
-			float: left;
-		}
-		
+			font-size: 36px;		
+		}			
+		.contenido{
+			padding-top:50px;
+		}	
 		li.RRSS {
-			float: right;
-			padding-top:15px;
-		}
-		
+			float:right;
+		}	
 		li.RRSS:hover {
 			filter:invert(100%);
+		}	
+		iframe{
+			width:100%;
+			height:93%; // Es la resta de el padding-top del menu, para que no haya scroll.
 		}
-
-		li.webpage {
-			float: right;
-			padding-top:15px;
-		}
+		#navbarCollapse{
+			float:right;
+			}
 		
-		li a {
-			display: block;
-			color: white;
-			text-align: center;
-			padding: 15px;
-			text-decoration: none;
-		}
-
-		li a:hover {
-			color: #111111;
-		}
-		
-				
-		#header{
-			position: fixed;
-			z-index: 100;
-			width: 100%;
-			
-		}
-
-		#contenido{
-			padding-top: 80px;
-			
-		}		
 	</style>
 </head>
 <body>
-
-
-	<div id="header">
-		<ul>
-		  <li class="logo"><h1>Rhotography</h1></li>
-
-		  <li class="RRSS"><a title="Instagram" href="https://www.instagram.com/rhotography8/" target = "_blank"><img src="img/WHinstagram.png" alt="Instagram" width=20 height=20/></a></li>
-		  <li class="RRSS"><a title="Facebook" href="https://www.facebook.com/roberto.almelalopez" target = "_blank"><img src="img/WHfacebook.png" alt="Facebook" width=20 height=20/></a></li>
-		  <li class="RRSS"><a title="Youtube" href="https://www.youtube.com/user/robertolocoification" target = "_blank"><img src="img/WHyoutube.png" alt="Youtube" width=20 height=20/></a></li>
-		  
-		  <li class = "webpage"><a href="contenido.html" target = "nombre">Inicio</a></li>
-		 
-		  <li class = "webpage"><a href="galeria.html"target = "nombre">Galería</a></li>
-		  
-		  <li class = "webpage"><a href="contacto.html" target = "nombre">Contactar</a></li>
-		  
-		  <li class = "webpage"><a href="about.html" target = "nombre">Sobre mí</a></li>
-		   
-		</ul>
+<nav id="myNavbar" class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
+	<div class="container">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbarCollapse">
+				<span class="sr-only">Navegación</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="contenido.html" target="nombre">Rhotography</a>
+		</div>
+		<div class="collapse navbar-collapse" id="navbarCollapse">
+			<ul class="nav navbar-nav">
+			
+				<li><a href="galeria.html" target="nombre">Galeria</a></li>
+				<li><a href="about.html" target="nombre">Sobre mí</a></li>
+				<li><a href="contacto.html" target="nombre">Contacto</a></li>
+				
+				<li class="RRSS"><a title="Instagram" href="https://www.instagram.com/rhotography8/" target ="_blank"><img src="img/WHinstagram.png" alt="Instagram" width=20 height=20/></a></li>
+				<li class="RRSS"><a title="Facebook" href="https://www.facebook.com/roberto.almelalopez" target ="_blank"><img src="img/WHfacebook.png" alt="Facebook" width=20 height=20/></a></li>
+				<li class="RRSS"><a title="Youtube" href="https://www.youtube.com/user/robertolocoification" target ="_blank"><img src="img/WHyoutube.png" alt="Youtube" width=20 height=20/></a></li>
+			</ul>
+		</div>
+	</div>
+</nav>
 	
+	<div class="contenido">
+	
+		<iframe name="nombre" src="contenido.html"  frameborder="0">Tu navegador no soporta iframes.</iframe>
+
 	</div>
 	
-	<div id="contenido">
-	
-	<iframe name="nombre" src="contenido.html" style="width:100%;height:100%">Tu navegador no soporta iframes</iframe>
-
+	<div class="row">
+		<div class="col-xs-12">
+			<footer>
+				<center><p>&copy; Copyright 2018 Roberto Almela</p></center>
+			</footer>
+		</div>
 	</div>
 	
 </body>
-
-
 </html>

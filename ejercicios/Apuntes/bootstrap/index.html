@@ -1,0 +1,118 @@
+<html>
+<head> 
+	<meta charset="UTF-8">
+	<meta name="author" content="Roberto Almela">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Kirang+Haerang" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+	
+	<title>Inicio</title>
+
+	<style>
+		* {
+		  padding: 0;
+		  margin: 0;
+		}
+		h1 {
+			font-family: 'Kirang Haerang', cursive;
+			color: white;
+			font-size: 24px;
+			padding: 10;		
+		}
+		
+		h2 {
+			font-family: 'Kirang Haerang', cursive;	
+			text-align: center;
+			font-size: 50px;
+		}
+						
+		ul {
+			font-family: 'Oswald', sans-serif;
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
+			background-color: #333333;
+		}
+
+		li.logo {
+			float: left;
+		}
+		
+		li.RRSS {
+			float: right;
+			padding-top:15px;
+		}
+		
+		li.RRSS:hover {
+			filter:invert(100%);
+		}
+
+		li.webpage {
+			float: right;
+			padding-top:15px;
+		}
+		
+		li a {
+			display: block;
+			color: white;
+			text-align: center;
+			padding: 15px;
+			text-decoration: none;
+		}
+
+		li a:hover {
+			color: #111111;
+		}
+					
+		.header{
+			position: fixed;
+			z-index: 100;
+			width: 100%;
+		}
+
+		.contenido{
+			padding-top:65px;
+		}	
+		
+		iframe{
+			width:100%;
+			height:89.7%; // Es la resta de el padding-top del menu, para que no haya scroll.
+		}
+		
+	</style>
+</head>
+<body>
+
+
+	<div class="header">
+		<ul>
+		  <li class="logo"><h1>Rhotography</h1></li>
+
+		  <li class="RRSS"><a title="Instagram" href="https://www.instagram.com/rhotography8/" target = "_blank"><img src="img/WHinstagram.png" alt="Instagram" width=20 height=20/></a></li>
+		  <li class="RRSS"><a title="Facebook" href="https://www.facebook.com/roberto.almelalopez" target = "_blank"><img src="img/WHfacebook.png" alt="Facebook" width=20 height=20/></a></li>
+		  <li class="RRSS"><a title="Youtube" href="https://www.youtube.com/user/robertolocoification" target = "_blank"><img src="img/WHyoutube.png" alt="Youtube" width=20 height=20/></a></li>
+		  
+		  <li class = "webpage"><a href="contenido.html" target = "nombre">Inicio</a></li>
+		 
+		  <li class = "webpage"><a href="galeria.html"target = "nombre">Galería</a></li>
+		  
+		  <li class = "webpage"><a href="contacto.html" target = "nombre">Contactar</a></li>
+		  
+		  <li class = "webpage"><a href="about.html" target = "nombre">Sobre mí</a></li>
+		   
+		</ul>
+	
+	</div>
+	
+	<div class="contenido">
+	
+		<iframe name="nombre" src="contenido.html"  frameborder="0">Tu navegador no soporta iframes.</iframe>
+
+	</div>
+	
+</body>
+
+
+</html>

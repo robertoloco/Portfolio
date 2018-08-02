@@ -1,0 +1,55 @@
+body {
+  background-color: gray;
+  padding-left: 50px;
+}
+
+input {
+  &[type="button"] {
+    &:hover {
+      background-color: slategray;
+      cursor: pointer;
+    }
+    &.arit {
+      background-color: maroon;
+    }
+    &.igual {
+      background-color: green;
+    }
+    &.clear {
+      background-color: orangered;
+    }
+  }
+  &[type="text"] {
+    background-color: black;
+    border: 0px;
+    width: 250px;
+    height: 40px;
+    font-size: 20px;
+    color: white;
+    text-align: right;
+    pointer-events: none;
+  }
+  &[name="txtcaja1"] {
+    height: 20px;
+    font-size: 16px;
+  }
+  &[name="txtcaja2"] {
+    margin-bottom: 5px;
+    font-size: 26px;
+  }
+  &[type="button"] {
+    font-size: 18px;
+    font-weight: lighter;
+    font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+    width: 60px;
+    border: 0px;
+    height: 60px;
+    color: white;
+    background-color: blue;
+    margin-bottom: 5px;
+  }
+}
+
+#button0 {
+  width: 125px;
+}

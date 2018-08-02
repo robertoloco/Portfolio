@@ -3,174 +3,72 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="author" content="Roberto Almela">
-	<title>Calcula tu presupuesto</title>
-<style>
-	input[type="button"]:hover{
-		background-color:slategray;
-		cursor: pointer;
-	}
-	input[type="button"].arit{
-		background-color:maroon;
-	}
-	input[type="button"].igual{
-		background-color: green;
-	}
-	input[type="button"].clear{
-		background-color:orangered;
-	}
-	input[type="text"]{
-		background-color:gray;
-		border:0px;
-		width:250px;
-		height: 40px;
-		font-size: 20px;
-		color: white;
-		text-align: right;
-		pointer-events: none;
-	}
-	input[name="txtcaja1"]{
-		height: 20px;
-		font-size: 16px;
-	}
-	input[name="txtcaja2"]{
-		margin-bottom: 5px;
-		font-size: 26px;
-	}
-	input[type="button"]{
-		font-size: 18px;
-		font-weight:lighter;
-		font-family:Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
-		width:60px;border:0px;
-		height: 60px;
-		color: white;
-		background-color:blue;
-		margin-bottom: 5px;
-        }
-		
-	#button0{
-			width:125px;
-	}
-		
-	.left{
-		float:left;
-	}
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	
-	.right{
-		float:right;
-		padding-right:80px;
-	}
-</style>
+	<link rel="stylesheet" href="css/calculadora.css">
+	<script src="js/calculadora.js"></script>
+	
+	<title>Calcula tu presupuesto</title>
+
 </head>
 
 <body>
+<div class="row">
+<div class="col-xs-4">
+	<form name="f1"><br>
+	<input type="text" name="txtcaja1">
+	<br>
+	<input type="text" name="txtcaja2" value="0">
+	<br>
+	<input type="button" class="clear" onClick="document.f1.txtcaja2.value='0'" value="CE">
+	<input type="button" class="clear" onClick="document.f1.reset(); blocdel = false;" value="C">
+	<input type="button" class="clear" onClick="deletecarac()" value="◄">
+	 
+	<input type="button" class="arit" onClick="arit('/')" value="÷">
+	<br>
+	<input type="button" onclick="escribir(this.value)" value="7">
+	<input type="button" onclick="escribir(this.value)" value="8">
+	<input type="button" onclick="escribir(this.value)" value="9">
+	<input type="button" class="arit" onClick="arit('*')" value="×">
+	<br>
+	<input type="button" onclick="escribir(this.value)" value="4">
+	<input type="button" onclick="escribir(this.value)" value="5">
+	<input type="button" onclick="escribir(this.value)" value="6">
+	<input type="button" class="arit" onClick="arit('-')" value="-">
+	<br>
+	<input type="button" onclick="escribir(this.value)" value="1">
+	<input type="button" onclick="escribir(this.value)" value="2">
+	<input type="button" onclick="escribir(this.value)" value="3">
+	<input type="button" class="arit" onClick="arit('+')" value="+">
+	<br>
 
-
-<form class="left" name="f1"><br>
-<input type="text" name="txtcaja1">
-<br>
-<input type="text" name="txtcaja2" value="0">
-<br>
-<input type="button" class="clear" onClick="document.f1.txtcaja2.value='0'" value="CE">
-<input type="button" class="clear" onClick="document.f1.reset(); blocdel = false;" value="C">
-<input type="button" class="clear" onClick="deletecarac()" value="◄">
- 
-<input type="button" class="arit" onClick="arit('/')" value="÷">
-<br>
-<input type="button" onclick="escribir(this.value)" value="7">
-<input type="button" onclick="escribir(this.value)" value="8">
-<input type="button" onclick="escribir(this.value)" value="9">
-<input type="button" class="arit" onClick="arit('*')" value="×">
-<br>
-<input type="button" onclick="escribir(this.value)" value="4">
-<input type="button" onclick="escribir(this.value)" value="5">
-<input type="button" onclick="escribir(this.value)" value="6">
-<input type="button" class="arit" onClick="arit('-')" value="-">
-<br>
-<input type="button" onclick="escribir(this.value)" value="1">
-<input type="button" onclick="escribir(this.value)" value="2">
-<input type="button" onclick="escribir(this.value)" value="3">
-<input type="button" class="arit" onClick="arit('+')" value="+">
-<br>
-
-<input id="button0" type="button" onclick="escribir(this.value)" value="0">
-<input type="button" onClick="escribir('.')" value=".">
-<input type="button" class="igual" onClick="calcular()" value="=">
-<br>
-</form>
-
-<div class="right">
-<h2>Calcula tu presupuesto</h2>
-<p>Puedes calcular tu presupuesto con nuestras tarifas predefinidas, si crees que se ajusta a ti, 
-de lo contrario puedes ponerte en contacto con nosotros y concretar una cita o un presupuesto a medida.
-</p>
-<ul>
-<li>Sesion de fotos (2h) - 150€</li>
-<li>Alquiler de material - 50€/h</li>
-</ul>
-
+	<input id="button0" type="button" onclick="escribir(this.value)" value="0">
+	<input type="button" onClick="escribir('.')" value=".">
+	<input type="button" class="igual" onClick="calcular()" value="=">
+	<br>
+	</form>
 </div>
 
-<script type="text/javascript">
-	var borrar = false;
-	function deletecarac(){
-		var caja2 = document.f1.txtcaja2.value;
-            if (caja2 == "" || caja2 == "0" || caja2.length == 1 && blocdel!=true){
-            	document.f1.txtcaja2.value = "0";
-            }
-            else if(blocdel!=true){
-             	var res = caja2.substring(0,caja2.length-1);
-             	document.f1.txtcaja2.value = res;
-            }
-	}
-   function escribir(n){
-		var caja2 = document.f1.txtcaja2.value;
-		if (borrar) {
-			//alert("se borro");
-			document.f1.txtcaja2.value="";
-			borrar = false;
-			document.f1.txtcaja2.value = n;
-		}
-		else if (caja2 == "0" && n != "."){
-			cajao = caja2.replace("0", "")
-			document.f1.txtcaja2.value = cajao + n;
-		}
-		else{
-			document.f1.txtcaja2.value = caja2 + n;
-		}
-	}
-	function raiz(){
-		var caja1 = document.f1.txtcaja1.value;
-		var caja2 = document.f1.txtcaja2.value;
-		document.f1.txtcaja1.value = "Math.sqrt("+ caja2 + caja1 +")";
-		document.f1.txtcaja2.value = "";
-	}
-	function arit(o){
-		var caja1 = document.f1.txtcaja1.value;
-		var caja2 = document.f1.txtcaja2.value;
-		var unum = caja1.substring(caja1.length-1);
-		calcular()
-		if (unum == "+" || unum == "-" || unum=="*" || unum=="/") {
-			unum = unum.replace(unum,o);
-			var res = caja1.substring(0,caja1.length-1);
-			document.f1.txtcaja1.value = res+unum;
-		}
-		if (caja1 == "" && caja2 != ""){
-			document.f1.txtcaja1.value = caja2 + o;
-		}
-		else{
-			document.f1.txtcaja1.value = caja1 + caja2 + o;
- 		}
- 		borrar = true;
-	}
-	function calcular(){
-		var caja1 = document.f1.txtcaja1.value;
-		var caja2 = document.f1.txtcaja2.value;
-		document.f1.txtcaja2.value = eval(caja1 + caja2);
-		document.f1.txtcaja1.value = "";
-		borrar = true;
-		blocdel = true;
-	}
-	
-</script>
+
+<div class="col-xs-8">
+	<h2>Calcula tu presupuesto</h2>
+		<p>Puedes calcular tu presupuesto con nuestras tarifas predefinidas, si crees que se ajusta a ti, 
+		de lo contrario puedes ponerte en contacto con nosotros y concretar una cita o un presupuesto a medida.
+		</p>
+	<ul>
+		<li>Sesion de fotos (2h) - 150€</li>
+		<li>Alquiler de material - 50€/h</li>
+		<li>Boda(video y fotos, album)- 2000€</li>
+		<li>Video dependiendo de la duracion del video, 100€/h</li>
+		<li>Hora de edicion de video - 15€/h</li>
+		<li>Asesoria audiovisual - 10€h/h/li>
+	</ul>
+
+</div>
+</div>
+
 </body>
 </html>

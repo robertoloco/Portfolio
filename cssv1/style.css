@@ -1,0 +1,65 @@
+* {
+		  padding: 0;
+		  margin: 0;
+		  text-shadow: -1px -1px 1px #333, 1px -1px 1px #333, -1px 1px 1px #333, 1px 1px 1px #333;	
+		  color: white;	
+		  text-align: center;		  
+		}
+		
+		@font-face{
+			font-family: "BebasNeue-Regular";
+			src: url("fonts/BebasNeue-Regular.otf") format("opentype");
+		}
+		
+		h1{
+			font-size: 40px;
+			letter-spacing: 0;
+			font-family: "BebasNeue-Regular";
+		}	
+		.mySlides {
+			display:flex;
+		}
+		
+		.w3-badge {
+			height:20px;
+			width:20px;
+			padding:0;
+		}
+		.button {
+			background-color: gray;
+			border: none;
+			padding: 15px 32px;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 24px;
+			margin: 4px 2px;
+			cursor: pointer;
+			opacity:0.7;
+		}
+		.button:hover{
+			opacity:1;
+		 }
+		.boton-left{
+			float:left!important;
+			font-size:40px;	
+			cursor:pointer;
+		}
+		.boton-right{
+			float:right!important;
+			font-size:40px;	
+			cursor:pointer;
+		}		
+		img{
+			width:100%;
+			height:100%;
+		}
+		.contenedor-center{
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, 50%);
+			-webkit-transform: translate(-50%, 80%);
+			z-index:100;
+		}
+	
+		

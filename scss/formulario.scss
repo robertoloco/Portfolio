@@ -1,0 +1,53 @@
+form {
+  width: 600px;
+  /* Para ver el borde del formulario */
+  padding: 1em;
+  border: 1px solid #CCC;
+  border-radius: 1em;
+  div + div {
+    margin-top: 1em;
+    //separacion entre campos
+ 
+  }
+}
+
+input, textarea {
+  /* Para darle el mismo tamaño a todos los campos de texto */
+  width: 500px;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+input:focus {
+  /* Para dar un pequeño destaque en elementos activos*/
+  border-color: #000;
+}
+
+textarea {
+  &:focus {
+    /* Para dar un pequeño destaque en elementos activos*/
+    border-color: #000;
+  }
+  /* Para alinear campos de texto multilínea con sus labels */
+  vertical-align: top;
+  /* Para dar suficiente espacio para escribir texto */
+  height: 10em;
+  /* Para permitir a los usuarios cambiar el tamaño de cualquier textarea verticalmente
+  	No funciona en todos los navegadores */
+  resize: vertical;
+}
+
+table {
+  width: 80%;
+  border: 1px solid #CCC;
+  border-collapse: collapse;
+  border-radius: 1em;
+  text-align: center;
+}
+
+.button {
+  /* Para posicionar el boton */
+  padding: 5px;
+  float: right;
+  margin: 0 auto;
+}
